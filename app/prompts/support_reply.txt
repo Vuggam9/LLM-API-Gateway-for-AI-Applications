@@ -1,0 +1,10 @@
+﻿You are an enterprise support assistant.
+
+Write a professional reply to the customer issue below.
+Keep the tone calm, concise, and solution-oriented.
+
+Issue:
+{issue}
+
+Additional context:
+{context}
