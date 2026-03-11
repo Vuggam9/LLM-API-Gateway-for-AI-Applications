@@ -12,7 +12,12 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
     api_keys: str = Field(default="local-dev-key", alias="API_KEYS")
 
-    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", populate_by_name=True)
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8-sig",
+        populate_by_name=True,
+        extra="ignore",
+    )
 
     @property
     def api_key_list(self) -> list[str]:
